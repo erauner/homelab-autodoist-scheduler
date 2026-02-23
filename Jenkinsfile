@@ -37,6 +37,16 @@ spec:
       limits:
         cpu: 1000m
         memory: 1Gi
+  - name: tools
+    image: alpine/k8s:1.31.3
+    command: ['sleep', '3600']
+    resources:
+      requests:
+        cpu: 50m
+        memory: 64Mi
+      limits:
+        cpu: 200m
+        memory: 256Mi
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug
     command: ['sleep', '3600']
