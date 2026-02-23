@@ -7,7 +7,7 @@ RUN useradd -r -u 1000 -m app
 
 WORKDIR /app
 
-COPY pyproject.toml README.md ./
+COPY pyproject.toml uv.lock README.md ./
 COPY src/ ./src/
 
 RUN pip install --no-cache-dir uv \
